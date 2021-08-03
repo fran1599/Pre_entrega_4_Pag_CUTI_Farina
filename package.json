@@ -18,5 +18,5 @@
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.12"
   },
-  "description": ""
+  "description": "está el código de scripts correspondientes al inicio de scss y de la función purgecss"
 }
