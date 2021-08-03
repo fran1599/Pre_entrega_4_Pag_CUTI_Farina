@@ -1,0 +1,249 @@
+//variables 
+$color_1: rgba(255, 179, 238, 0.596);
+$color_2: rgba(196, 125, 180, 0.596);
+$primary: rgba(232, 245, 255, 0.8);
+$secondary: rgba(210, 209, 248, 0.644);
+$body-bg: $color_1;
+$sombreado: 3px 3px 20px rgba(88, 88, 88, 0.4%);
+$sombreado-2: 5px 5px 50px rgba(0, 0, 0, 40%);
+$negrita: 900;
+$ancho: 50vh;
+$dropdown-bg: $primary;
+$dropdown-link-hover-bg: $color_2;
+$body-color: black;
+
+.btn:hover {background-color: $color_2;}
+
+.btn:focus {background-color:$color_2;}
+
+//import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+* { 
+    padding: 0;
+    font-size: 100%; 
+    font-family: roboto, Arial, Tahoma, sans-serif; 
+}
+
+nav{
+    ul {
+        background: $primary;
+    }
+}
+
+main div {height:  100vh;}
+
+article {
+    background-color: $secondary;
+}
+
+.tituloCentrado {
+    text-align: center;
+    text-shadow: $sombreado;
+    font-weight: $negrita;
+    font-size: 1.6rem;
+}
+
+footer {
+    background-color: $secondary;
+    height: 20vh;
+    font-size: large;
+    text-align: center;
+    margin:10px 0px 0px;
+    padding-top: 4vh;
+}
+
+//estilo pag-index
+
+.convocs {
+    padding: 50px 50px 0px;
+    .convA {
+        display: grid;
+        grid-template-areas: "convA__img convA__titulo" "convA__img convA__texto";
+        margin-bottom: 25px;
+        padding: 2vh;
+        border-radius: 1.5vw;
+        align-items: center;
+        justify-items: center;
+        box-shadow: $sombreado;
+        .convA__img {
+            grid-area: convA__img; 
+            border: 1px solid rgb(88, 88, 88);
+            width: 36vw;
+        }
+        .convA__titulo {
+            font-size: 5vh;
+            font-weight: $negrita;
+            margin-top: 1.5vh;
+            grid-area: convA__titulo; 
+            
+        }
+        .convA__texto {
+            grid-area: convA__texto; 
+            text-align: center;
+            line-height: 7vh;
+            margin: 0px 1.5vw 3vh;
+        }
+    }
+    .convB {
+        display: grid;
+        grid-template-areas: "convB__titulo convB__img" "convB__texto convB__img";
+        margin-bottom: 25px;
+        padding: 2vh;
+        border-radius: 1.5vw;
+        align-items: center;
+        justify-items: center;
+        box-shadow: $sombreado;
+        .convB__img {
+            grid-area: convB__img; 
+            border: 1px solid rgb(88, 88, 88);
+            width: 36vw;
+        }
+        .convB__titulo {
+            grid-area: convB__titulo; 
+            font-size: 5vh;
+            font-weight: $negrita;
+            margin-top: 1.5vh;
+        }
+        .convB__texto {
+            grid-area: convB__texto; 
+            text-align: center;
+            line-height: 7vh;
+            margin: 0px 1.5vw 3vh;
+        }
+    }
+}
+
+.notiBlog {
+    padding: 2vh 2.5vw 0px;
+    display: grid;
+    grid-template-columns: 29.5vw 29.5vw 29.5vw;
+    justify-content: space-around;
+    .notiBlogBox {
+        border-radius: 1.5vw;
+        box-shadow: $sombreado;
+        margin-bottom: 30px;
+        .notiBlogBox__img {
+            border: 1px solid rgb(88, 88, 88);
+            margin: 2vh 1vw 0px 1vw;
+            width: 27.3vw;
+        }
+        .notiBlogBox__titulo {
+            text-align:start;
+            font-size: 25px;
+            font-weight: $negrita;
+            padding: 5px 10px 0px;
+        }
+        .notiBlogBox__texto {
+            text-align:justify;
+            padding: 10px 15px 15px;
+        }
+    }
+}
+
+//estilo pag-contacto
+div{
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 100px;
+        font-size: 0.9rem;
+        text-align:left;
+        line-height: 4vh;
+        div {
+            padding: 20px 20px 20px 0px;
+        }
+        input {
+            width: $ancho;
+            margin: 0px;
+        }
+        .boton {
+            box-shadow: $sombreado;
+            font-weight: $negrita/3;
+            width: $ancho;
+            margin: 10px;
+        }
+    }
+}
+
+//estilo pag-sobre nosotrxs
+.artIdent {
+    border-radius: 1.5vw;
+    line-height: 6vh;
+    padding: 1vw 3vw;
+    margin: 4vw;
+    text-align: justify;
+        .titIdent {
+        font-weight: 900;
+        padding-bottom: 1vw;
+    }
+        .txtIdent {
+        text-indent: 3vw;
+        padding: 0vh 2vw 1.5vw;
+    }
+        .titPrinc {
+        font-weight: 900;
+    }
+}
+
+
+
+//estilo pag-fica
+
+#aplica {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 4vw;
+    li {
+        a {
+            img {
+                box-shadow: $sombreado;
+                border-radius: 1vw;
+                margin: 0px;
+                width: 19vw;
+                height: 9vh;
+                transition: all 0.5s;
+            }
+            img:hover {
+                box-shadow: $sombreado-2
+            }
+        }
+    } 
+    .btnLink {
+        transition: all 0.3s;
+        padding: 0px;
+        margin: 0px;
+        border: 2px solid black;
+        border-radius: 1vw;
+    }
+    .btnLink:hover {
+        transform: scale(1.05);
+        padding: 0px;
+    }
+}
+
+//estilo pag-ola
+
+.textoCentrado {
+    background-color: rgba(255, 255, 255, 0%);
+    text-align: center;
+    font-weight: bold;
+    line-height: 4vh;
+    padding: 2vw 10vw 7vw;
+}
+
+#nuestraPropuesta {
+    display: flex;
+    padding-top: 0px;
+}
+
+.lados {
+    border-radius: 1.5vw;
+    line-height: 4.5vh;
+    padding: 1vw 3vw;
+    margin: 4vw;
+    text-align: justify;
+}
